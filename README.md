@@ -122,8 +122,6 @@ A **Tableau interactive dashboard** was developed to translate model outputs int
 - Interactive filters: by meter type, year, or anomaly category.  
 - Hover tooltips show **serial number, G-size, and last maintenance date**.
 
-![Dashboard Overview](docs/dashboard_overview.png)
-
 ---
 
 ## 💡 Insights
