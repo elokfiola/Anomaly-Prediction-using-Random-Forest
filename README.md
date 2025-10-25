@@ -54,6 +54,7 @@ Initial distribution:
 - Normal : 41 samples  
 - Anomaly : 22 samples  
 
+![Distribution Before and After SMOTE](Pictures/distribusi-smote-nonsmote.png)
 Applied **SMOTE** (k-nearest neighbors) to oversample the minority class, generating synthetic points.  
 After balancing, both classes contained **41 : 41** records — achieving a 50 : 50 ratio.
 
