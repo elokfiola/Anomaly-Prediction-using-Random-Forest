@@ -76,3 +76,70 @@ min_samples_leaf = 2
 n_estimators = 300
 class_weight = 'balanced'
 random_state = 42
+
+---
+
+### 🔹 5. Evaluation Metrics  
+Evaluation was performed using standard classification metrics:  
+- **Accuracy** – overall correctness  
+- **Precision / Recall / F1-Score** – classification quality for minority class  
+- **AUC-ROC** – separation capability  
+- **G-Mean** – balance between sensitivity and specificity  
+- **Youden’s Index** – overall classification strength  
+
+---
+
+## 🧠 Results & Analysis
+| Model | Accuracy | Precision | Recall | F1-Score | G-Mean | Youden’s Index | AUC |
+|:------|:---------:|:----------:|:-------:|:---------:|:--------:|:---------------:|:----:|
+| Random Forest | **76.2%** | **75%** | **71.5%** | **72%** | **74.9%** | **0.50** | **0.724** |
+| RF + SMOTE | 66.7% | 50% | 57.1% | 53% | 64% | 0.29 | 0.714 |
+
+📊 **Key Findings:**
+- The **baseline Random Forest** outperformed the oversampled model across all metrics.  
+- SMOTE slightly degraded recall, suggesting synthetic samples introduced mild noise.  
+- Despite class imbalance, the baseline achieved strong AUC > 0.70 — indicating a reliable separation between normal and anomaly classes.  
+- **Training time:**  
+  - RF = 17 min  
+  - RF + SMOTE = 9 min → ≈ 47% faster, but less accurate.
+
+---
+
+## 📊 Visualization Dashboard
+A **Tableau interactive dashboard** was developed to translate model outputs into actionable insights.
+
+### 🔸 1. Meter Overview Dashboard
+- Annual summary of meter status (Normal vs Anomaly).  
+- Breakdown by **meter type** (Rotary, Turbine, Diaphragm).  
+- Aggregated charts showing number of active, calibrated, or faulty meters.
+
+### 🔸 2. Customer Detail Dashboard
+- View individual customer records with **usage duration** and **accuracy score**.  
+- Displays **maintenance recommendations** (e.g., calibration or replacement).  
+- Interactive filters: by meter type, year, or anomaly category.  
+- Hover tooltips show **serial number, G-size, and last maintenance date**.
+
+![Dashboard Overview](docs/dashboard_overview.png)
+
+---
+
+## 💡 Insights
+- Random Forest remains robust even with limited and imbalanced industrial data.  
+- Dashboard analytics enable preventive maintenance by flagging meters with rising anomaly risk.  
+- Visualization and model integration provide an explainable approach for technical operators.  
+- Future work may include **time-series modeling** or **real-time streaming dashboards**.
+
+---
+
+## 🧩 Tech Stack
+| Component | Tool / Library |
+|------------|----------------|
+| **Programming Language** | Python 3.10 |
+| **Libraries** | pandas, numpy, scikit-learn, imbalanced-learn |
+| **Visualization** | matplotlib, seaborn, Tableau |
+| **Environment** | Jupyter Notebook, Excel |
+| **Version Control** | GitHub |
+
+---
+
+## 📂 Repository Structure
