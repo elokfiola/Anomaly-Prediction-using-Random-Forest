@@ -70,3 +70,9 @@ Two experiments were conducted:
 Hyperparameter tuning performed using **GridSearchCV** with 5-fold stratified cross-validation.
 
 **Best parameters found:**
+max_depth = 8
+max_features = 0.5
+min_samples_leaf = 2
+n_estimators = 300
+class_weight = 'balanced'
+random_state = 42
