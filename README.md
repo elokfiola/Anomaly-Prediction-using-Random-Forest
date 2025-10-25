@@ -96,6 +96,8 @@ Evaluation was performed using standard classification metrics:
 | Random Forest | **76.2%** | **75%** | **71.5%** | **72%** | **74.9%** | **0.50** | **0.724** |
 | RF + SMOTE | 66.7% | 50% | 57.1% | 53% | 64% | 0.29 | 0.714 |
 
+![Comparison of Classification Models](Pictures/bar-2-model.png)
+
 📊 **Key Findings:**
 - The **baseline Random Forest** outperformed the oversampled model across all metrics.  
 - SMOTE slightly degraded recall, suggesting synthetic samples introduced mild noise.  
