@@ -143,4 +143,3 @@ A **Tableau interactive dashboard** was developed to translate model outputs int
 
 ---
 
-## 📂 Repository Structure
